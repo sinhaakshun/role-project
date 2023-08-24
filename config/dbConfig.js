@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
+require('dotenv').config()
 
-const sequelize = new Sequelize('role', 'root', '12345678', {
+const sequelize = new Sequelize('role', process.env.DB_USER, process.env.DB_PASSWORD, {
   host: 'localhost',
   dialect: 'mysql',
 });
